@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Mi lista de carros</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+        
+        <script src="js/services/CarrosServices.js"></script>
+        <script src="js/controllers/CarrosController.js"></script>
+
+    </head>
+    <body ng-app="CarrosContolador">
+        <div class="container" ng-controller="CarrosController">
+            <table class="table">
+                <thead>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="carro in Carros">
+                        <tb>{{ carro.marca }}</tb>
+                        <tb>{{ carro.modelo }}</tb>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
