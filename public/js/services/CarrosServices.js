@@ -13,7 +13,7 @@ appCarrosService.factory('Carros', ['$http', function($http){
 
 appCarrosService.controller('CarrosController',[
     '$scope','Carros', function($scope, Carros) {
-
+        
         $scope.obtenerLista = function(){
             Carros.obtenerCarros()
             .then( function(res){
