@@ -10,6 +10,10 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname,'public','index.html'));
 });
 
+app.get('/js/services/CarrosServices.js', function (req, res) {
+    res.sendFile(path.join(__dirname,'public', 'js', 'services', 'CarrosServices.js'));
+});
+
 app.get('/apiCarros', function (req, res) {
     var carros = [
         {

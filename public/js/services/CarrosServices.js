@@ -1,4 +1,4 @@
-var appCarrosService = angular.module('CarrosService',[]);
+var appCarrosService = angular.module('carros',[]);
 
 appCarrosService.factory('Carros', ['$http', function($http){
     var listaDeCarros = function(){
@@ -11,3 +11,19 @@ appCarrosService.factory('Carros', ['$http', function($http){
 
 }]);
 
+appCarrosService.controller('CarrosController',[
+    '$scope','Carros', function($scope, Carros) {
+
+        $scope.obtenerLista = function(){
+            Carros.obtenerCarros()
+            .then( function(res){
+                var carros = res.data;
+                console.log(carros);
+                $scope.listaCarros = carros;
+            }, function(res) {
+                console.log('error');
+            });
+        };
+
+        $scope.obtenerLista();
+}]);

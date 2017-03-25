@@ -6,10 +6,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
         
         <script src="js/services/CarrosServices.js"></script>
-        <script src="js/controllers/CarrosController.js"></script>
-
     </head>
-    <body ng-app="CarrosContolador">
+    <body ng-app="carros">
         <div class="container" ng-controller="CarrosController">
             <table class="table">
                 <thead>
@@ -17,7 +15,7 @@
                     <th>Modelo</th>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="carro in Carros">
+                    <tr ng-repeat="carro in listaCarros">
                         <tb>{{ carro.marca }}</tb>
                         <tb>{{ carro.modelo }}</tb>
                     </tr>
